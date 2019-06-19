@@ -9,12 +9,12 @@ class App extends Component {
       {name: 'Kacper', gender: 'M', id: 1},
       {name: 'Patrycja', gender: 'F', id: 2},
       {name: 'Marcel', gender: 'M', id: 3},
-      {name: 'Wiktoria', gender: 'F', id: 4}
+      {name: 'Czaro', gender: 'M', id: 4}
     ]
   }
 
   addPlayer = (player) => {
-    player.id = this.state.todos.length + 1;
+    player.id = this.state.players.length + 1;
     let players = [...this.state.players, player];
 
     this.setState({
@@ -36,7 +36,7 @@ class App extends Component {
   render(){
     return (
      <div>
-       <Home players={this.state.players} deletePlayer={this.deletePlayer}/>
+       <Home players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer}/>
      </div>
     );
   }

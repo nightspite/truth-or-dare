@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Players from './Players';
+import AddPlayer from './AddPlayer';
 
-const Home = ({players, deletePlayer}) => {
+const Home = ({players, deletePlayer, addPlayer}) => {
   return (
     <div className="add-players">
     <Players players={players} deletePlayer={deletePlayer}/>
 
-    <div className="add-player"></div>
+      <AddPlayer addPlayer={addPlayer} />
+
       <button className="start-btn">
-      <i className="material-icons">play_arrow</i> <p>Let's play!</p>
+        <i className="material-icons">play_arrow</i> <p>Let's play!</p>
       </button>
     </div>
   );

@@ -15,7 +15,7 @@
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     max-height: 80vh;
-    margin-bottom: 140px;
+    margin-bottom: 180px;
     overflow: auto;
     padding: 0 10px; }
     .add-players .players::-webkit-scrollbar {
@@ -35,13 +35,15 @@
       min-width: 60vw;
       font-weight: 900; }
       .add-players .players .player .gender {
-        position: absolute;
-        margin-left: -20px;
+        margin-right: 20px;
         font-size: 11px; }
       .add-players .players .player i {
         font-size: 11px;
         margin-left: auto;
         margin-right: 0; }
+  .add-players .add-player {
+    position: absolute;
+    bottom: 140px; }
   .add-players .start-btn {
     width: 80%;
     height: 70px;
