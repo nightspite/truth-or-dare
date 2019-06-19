@@ -1,30 +1,38 @@
-.App {
+.App{
   font-family: 'Montserrat', sans-serif;
-  color: #fff; }
+  color: #fff;
+}
 
-.add-players {
+.add-players{
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to top, #4242f4, #007eff, #00a6ff, #00c7ff, #12e2eb);
   display: flex;
   flex-direction: column;
   justify-content: baseline;
-  align-items: center; }
-  .add-players .players {
+  align-items: center;
+  
+
+  .players{
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     max-height: 80vh;
     margin-bottom: 140px;
     overflow: auto;
-    padding: 0 10px; }
-    .add-players .players::-webkit-scrollbar {
+    padding: 0 10px;
+
+    &::-webkit-scrollbar{
       width: 6px;
-      background-color: transparent; }
-    .add-players .players::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
       border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: #555; }
-    .add-players .players .player {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+
+    .player{
       border-bottom: 1px solid rgba(33, 33, 37, 0.35);
       padding: 20px 5px 8px 5px;
       text-align: left;
@@ -33,16 +41,23 @@
       font-size: 16px;
       min-width: 60vw;
       font-weight: 900;
-      color: #fff; }
-      .add-players .players .player .gender {
+      color: #fff;
+      
+      .gender{
         position: absolute;
         margin-left: -20px;
-        font-size: 11px; }
-      .add-players .players .player i {
+        font-size: 11px;
+      }
+
+      i{
         font-size: 11px;
         margin-left: auto;
-        margin-right: 0; }
-  .add-players .start-btn {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .start-btn{
     width: 80%;
     height: 70px;
     color: #fff;
@@ -58,6 +73,6 @@
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif; }
-
-/*# sourceMappingURL=App.css.map */
+    font-family: 'Montserrat', sans-serif;
+  }
+}

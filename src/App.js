@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+// import { BrowserRouter, Route} from 'react-router-dom';
+import Home from './components/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    players: [
+      {name: 'Kacper', gender: 'M', id: 1},
+      {name: 'Patrycja', gender: 'F', id: 2},
+      {name: 'Marcel', gender: 'M', id: 3},
+      {name: 'Wiktoria', gender: 'F', id: 4}
+    ]
+  }
+
+  deletePlayer = (id) => {
+
+    const players = this.state.players.filter(player => {
+      return player.id !== id
+    })
+
+    this.setState({
+      players
+    })
+  }
+
+  render(){
+    return (
+     <div>
+       <Home players={this.state.players} deletePlayer={this.deletePlayer}/>
+     </div>
+    );
+  }
 }
 
 export default App;
