@@ -13,6 +13,15 @@ class App extends Component {
     ]
   }
 
+  addPlayer = (player) => {
+    player.id = this.state.todos.length + 1;
+    let players = [...this.state.players, player];
+
+    this.setState({
+      players
+    })
+  }
+
   deletePlayer = (id) => {
 
     const players = this.state.players.filter(player => {
