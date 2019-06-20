@@ -12,7 +12,9 @@ const Players = ({players, deletePlayer}) => {
       )
     })
   ) : (
-    <p>Add player</p>
+    <div className="player no-players">
+      <span>Add users</span>
+    </div>
   )
   return (
       <div className="players">

@@ -40,10 +40,68 @@
       .add-players .players .player i {
         font-size: 11px;
         margin-left: auto;
-        margin-right: 0; }
+        margin-right: 0;
+        cursor: pointer; }
+    .add-players .players .no-players span {
+      margin: 0 auto; }
   .add-players .add-player {
     position: absolute;
-    bottom: 140px; }
+    bottom: 130px; }
+    .add-players .add-player .player-form {
+      display: flex;
+      flex-direction: row;
+      max-width: 80vw;
+      margin: 0 auto;
+      padding-right: 10px; }
+      .add-players .add-player .player-form .switch {
+        min-width: 65px;
+        position: relative; }
+        .add-players .add-player .player-form .switch:before {
+          content: '  ';
+          z-index: -1;
+          display: inline-block; }
+        .add-players .add-player .player-form .switch__label {
+          display: inline-block;
+          padding: 10px;
+          cursor: pointer;
+          transition: color 200ms ease-out; }
+          .add-players .add-player .player-form .switch__label:hover {
+            color: white; }
+        .add-players .add-player .player-form .switch__indicator {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 9px;
+          left: -1px;
+          border-radius: 50%;
+          transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
+          transform: translate3d(1rem, 0, 0); }
+        .add-players .add-player .player-form .switch input#male:checked ~ .switch__indicator {
+          background: PaleGreen;
+          transform: translateX(10px); }
+        .add-players .add-player .player-form .switch input#female:checked ~ .switch__indicator {
+          background: MediumTurquoise;
+          transform: translateX(37px); }
+        .add-players .add-player .player-form .switch input[type="radio"]:not(:checked), .add-players .add-player .player-form .switch input[type="radio"]:checked {
+          display: none; }
+    .add-players .add-player input#user-input {
+      min-width: 0;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+      background: none;
+      color: #fff;
+      padding: 0 5px;
+      text-align: center; }
+      .add-players .add-player input#user-input::placeholder {
+        color: rgba(255, 255, 255, 0.5); }
+    .add-players .add-player button {
+      border: none;
+      background: none;
+      color: rgba(255, 255, 255, 0.9);
+      cursor: pointer; }
+      .add-players .add-player button i {
+        font-size: 15px;
+        margin-top: 10px; }
   .add-players .start-btn {
     width: 80%;
     height: 70px;
@@ -53,7 +111,7 @@
     border-radius: 10px;
     position: absolute;
     bottom: 0;
-    margin-bottom: 10vw;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
