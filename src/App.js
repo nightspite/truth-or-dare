@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 // import { BrowserRouter, Route} from 'react-router-dom';
 import Home from './components/Home';
+import Players from './components/Players';
+import Roll from './components/Roll';
+
 
 class App extends Component {
   state = {
@@ -36,7 +39,11 @@ class App extends Component {
   render(){
     return (
      <div>
-       <Home players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer}/>
+       {/* <Home players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer}/> */}
+
+       {/* <Players players={this.state.players} /> */}
+
+        <Roll />
      </div>
     );
   }
