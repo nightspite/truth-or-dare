@@ -5,7 +5,6 @@ import AddPlayer from './AddPlayer';
 const Home = ({players, deletePlayer, addPlayer}) => {
   return (
     <div className="home">
-      <div className="add-players">
       <Players players={players} deletePlayer={deletePlayer}/>
 
         <AddPlayer addPlayer={addPlayer} />
@@ -13,7 +12,6 @@ const Home = ({players, deletePlayer, addPlayer}) => {
         <button className="start-btn">
           <i className="material-icons">play_arrow</i> <p>Let's play!</p>
         </button>
-      </div>
     </div>
   );
 }

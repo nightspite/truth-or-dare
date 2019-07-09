@@ -3,7 +3,8 @@ import './App.css';
 // import { BrowserRouter, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Players from './components/Players';
-import Roll from './components/Roll';
+import TruthOrDare from './components/TruthOrDare';
+import TruthCard from './components/TruthCard';
 
 
 class App extends Component {
@@ -38,12 +39,13 @@ class App extends Component {
 
   render(){
     return (
-     <div>
+     <div className="App">
        {/* <Home players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer}/> */}
 
        {/* <Players players={this.state.players} /> */}
 
-        <Roll />
+        <TruthOrDare players={this.state.players}/>
+        {/* <TruthCard /> */}
      </div>
     );
   }

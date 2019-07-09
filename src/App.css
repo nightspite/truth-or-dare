@@ -2,30 +2,30 @@
   font-family: 'Montserrat', sans-serif;
   color: #fff; }
 
-.add-players {
+.home {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(to top, #4242f4, #007eff, #00a6ff, #00c7ff, #12e2eb);
+  background-image: linear-gradient(to right bottom, #550073, #510081, #480091, #3702a2, #040cb3);
   display: flex;
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
   color: #fff; }
-  .add-players .players {
+  .home .players {
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     max-height: 80vh;
     margin-bottom: 180px;
     overflow: auto;
     padding: 0 10px; }
-    .add-players .players::-webkit-scrollbar {
+    .home .players::-webkit-scrollbar {
       width: 6px;
       background-color: transparent; }
-    .add-players .players::-webkit-scrollbar-thumb {
+    .home .players::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
       background-color: #555; }
-    .add-players .players .player {
+    .home .players .player {
       border-bottom: 1px solid rgba(33, 33, 37, 0.35);
       padding: 20px 5px 8px 5px;
       text-align: left;
@@ -34,57 +34,56 @@
       font-size: 16px;
       min-width: 60vw;
       font-weight: 900; }
-      .add-players .players .player .gender {
+      .home .players .player .gender {
         margin-right: 20px;
         font-size: 11px; }
-      .add-players .players .player i {
+      .home .players .player i {
         font-size: 11px;
         margin-left: auto;
         margin-right: 0;
         cursor: pointer; }
-    .add-players .players .no-players span {
+    .home .players .no-players span {
       margin: 0 auto; }
-  .add-players .add-player {
+  .home .add-player {
     position: absolute;
     bottom: 130px; }
-    .add-players .add-player .player-form {
+    .home .add-player .player-form {
       display: flex;
       flex-direction: row;
       max-width: 80vw;
       margin: 0 auto;
       padding-right: 10px; }
-      .add-players .add-player .player-form .switch {
+      .home .add-player .player-form .switch {
         min-width: 65px;
         position: relative; }
-        .add-players .add-player .player-form .switch:before {
+        .home .add-player .player-form .switch:before {
           content: '  ';
           z-index: -1;
           display: inline-block; }
-        .add-players .add-player .player-form .switch__label {
+        .home .add-player .player-form .switch__label {
           display: inline-block;
           padding: 10px;
           cursor: pointer;
           transition: color 200ms ease-out; }
-          .add-players .add-player .player-form .switch__label:hover {
+          .home .add-player .player-form .switch__label:hover {
             color: white; }
-        .add-players .add-player .player-form .switch__indicator {
+        .home .add-player .player-form .switch__indicator {
           width: 20px;
           height: 20px;
           position: absolute;
-          top: 9px;
-          left: -1px;
+          top: 7px;
           border-radius: 50%;
           transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
           transform: translate3d(1rem, 0, 0); }
-        .add-players .add-player .player-form .switch input#male:checked ~ .switch__indicator {
-          background: PaleGreen;
-          transform: translateX(10px); }
-        .add-players .add-player .player-form .switch input#female:checked ~ .switch__indicator {
-          background: MediumTurquoise;
+        .home .add-player .player-form .switch input#male:checked ~ .switch__indicator {
+          background: #006E73;
+          transform: translateX(8px); }
+        .home .add-player .player-form .switch input#female:checked ~ .switch__indicator {
+          background: #006E73;
           transform: translateX(37px); }
-        .add-players .add-player .player-form .switch input[type="radio"]:not(:checked), .add-players .add-player .player-form .switch input[type="radio"]:checked {
+        .home .add-player .player-form .switch input[type="radio"]:not(:checked), .home .add-player .player-form .switch input[type="radio"]:checked {
           display: none; }
-    .add-players .add-player input#user-input {
+    .home .add-player input#user-input {
       min-width: 0;
       border: none;
       border-bottom: 1px solid rgba(255, 255, 255, 0.9);
@@ -92,17 +91,17 @@
       color: #fff;
       padding: 0 5px;
       text-align: center; }
-      .add-players .add-player input#user-input::placeholder {
+      .home .add-player input#user-input::placeholder {
         color: rgba(255, 255, 255, 0.5); }
-    .add-players .add-player button {
+    .home .add-player button {
       border: none;
       background: none;
       color: rgba(255, 255, 255, 0.9);
       cursor: pointer; }
-      .add-players .add-player button i {
+      .home .add-player button i {
         font-size: 15px;
         margin-top: 10px; }
-  .add-players .start-btn {
+  .home .start-btn {
     width: 80%;
     height: 70px;
     color: #fff;
@@ -119,5 +118,135 @@
     font-weight: 900;
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif; }
+
+.truth-or-dare {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right bottom, #550073, #510081, #480091, #3702a2, #040cb3); }
+  .truth-or-dare .card {
+    width: 80%;
+    height: 80%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .truth-or-dare .card .truth,
+    .truth-or-dare .card .dare {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      height: 50%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      font-weight: 900;
+      font-size: 8vw;
+      letter-spacing: 10px; }
+    .truth-or-dare .card .truth {
+      border-bottom: 1.5px solid #fff; }
+    .truth-or-dare .card .dare {
+      border-top: 1.5px solid #fff; }
+    .truth-or-dare .card .player {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      left: 50%;
+      height: 50px;
+      padding: 0 20px;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border: 3px solid #fff;
+      border-radius: 25px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      color: #444;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900; }
+
+.truth-card {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right bottom, #550073, #510081, #480091, #3702a2, #040cb3); }
+  .truth-card .card {
+    width: 80%;
+    height: 80%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .truth-card .card .label {
+      position: absolute;
+      left: 50%;
+      padding: 0 20px;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: #444;
+      background: #fff;
+      border: 3px solid #fff;
+      border-radius: 25px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box; }
+    .truth-card .card .content {
+      position: relative;
+      height: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-align: center;
+      padding: 0 10%; }
+    .truth-card .card .shot {
+      position: absolute;
+      bottom: 25%;
+      left: 50%;
+      padding: 10px;
+      width: 69px;
+      transform: translateX(-50%);
+      border: 2px solid #fff;
+      border-radius: 50px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-shadow: 0 0 25px 5px #212125; }
+      .truth-card .card .shot img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 35px; }
+    .truth-card .card .next-round-btn {
+      width: 80%;
+      height: 70px;
+      color: #fff;
+      background-color: #212125;
+      border: 0;
+      border-radius: 10px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', sans-serif; }
 
 /*# sourceMappingURL=App.css.map */
