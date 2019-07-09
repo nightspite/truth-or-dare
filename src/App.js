@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import Home from './components/Home';
-import Players from './components/Players';
 import TruthOrDare from './components/TruthOrDare';
 import TruthCard from './components/TruthCard';
+import DareCard from './components/DareCard';
+import {Link} from 'react-router-dom';
 
 
 class App extends Component {
@@ -38,6 +39,9 @@ class App extends Component {
       {question: 'How many sex partners do you believe is “too many”?', shot: 2, id: 18},
       {question: 'What’s #1 on your sexual bucket list right now?', shot: 2, id: 19},
       {question: 'If you had to choose between only oral sex or only penetrative sex for the rest of your life, which one would you pick?', shot: 2, id: 20}
+    ],
+    dares: [
+      {dare: 'Kill yourself', shot: 2137, id: 1}
     ]
   }
 
@@ -63,16 +67,22 @@ class App extends Component {
 
   render(){
     return (
-     <div className="App">
-       {/* <Home players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer}/> */}
+      <BrowserRouter>
+        <div className="App">
+          <Route exact path='/' render={(props) => (<Home {...props} players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer} />)} />
+          <Route exact path='/truthordare' render={(props) => (<TruthOrDare {...props} players={this.state.players} />)} />
+          <Route exact path='/truthcard' render={(props) => (<TruthCard {...props} questions={this.state.questions} randomPick={Math.floor(Math.random() * this.state.questions.length)} />)} />
+          <Route exact path='/darecard' render={(props) => (<DareCard {...props} dares={this.state.dares} randomPick={Math.floor(Math.random() * this.state.dares.length)} />)} />
 
-       {/* <Players players={this.state.players} /> */}
+          <Link to="/" className="home-btn">
+            <button><i className="material-icons">home</i></button>
+          </Link>
 
-        {/* <TruthOrDare players={this.state.players}/> */}
-        <TruthCard questions={this.state.questions} randomPick={Math.floor(Math.random() * this.state.questions.length)}/>
-     </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
 export default App;
+

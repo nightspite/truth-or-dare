@@ -3,7 +3,7 @@ import shot from './shot.png';
 import Shot from './Shot';
 import {Link, withRouter} from 'react-router-dom';
 
-class TruthCard extends Component {
+class DareCard extends Component {
   state = { show: false };
 
   showModal = () => {
@@ -15,19 +15,19 @@ class TruthCard extends Component {
   };
 
   render(){
-    const {questions,randomPick} = this.props;
+    const {dares,randomPick} = this.props;
     return (
       <div className="truth-card">
         <div className="card">
           <div className="label">TRUTH</div>
           <div className="content">
-            <p>{questions[randomPick].question}</p>
+            <p>{dares[randomPick].dare}</p>
           </div>
 
             <Shot show={this.state.show} handleClose={this.hideModal}>
               <p>U have to drink</p>
-              <p>{questions[randomPick].shot}</p>
-              <p>{questions[randomPick].shot === 1 ? "shot" : "shots"}</p>
+              <p>{dares[randomPick].shot}</p>
+              <p>{dares[randomPick].shot === 1 ? "shot" : "shots"}</p>
             </Shot>
 
           <div className="shot" onClick={this.showModal}>
@@ -43,5 +43,5 @@ class TruthCard extends Component {
   }
 }
 
-export default withRouter(TruthCard);
+export default withRouter(DareCard);
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import Players from './Players';
 import AddPlayer from './AddPlayer';
+import {Link, withRouter} from 'react-router-dom';
+
 
 const Home = ({players, deletePlayer, addPlayer}) => {
   return (
@@ -8,13 +10,14 @@ const Home = ({players, deletePlayer, addPlayer}) => {
       <Players players={players} deletePlayer={deletePlayer}/>
 
         <AddPlayer addPlayer={addPlayer} />
-
-        <button className="start-btn">
-          <i className="material-icons">play_arrow</i> <p>Let's play!</p>
-        </button>
+        <Link to="/truthordare">
+          <button className="start-btn">
+            <i className="material-icons">play_arrow</i> <p>Let's play!</p>
+          </button>
+        </Link>
     </div>
   );
 }
 
-export default Home;
+export default withRouter(Home);
 
