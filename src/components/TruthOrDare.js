@@ -1,18 +1,7 @@
 import React from 'react';
 
 const TruthOrDare = ({players}) => {
-  const playerRoll = players.length ? (
-    players.filter(player => {
-      return (
-        player.id === 3
-      )
-    })
-  ) : (
-    <div className="player no-players">
-      <span>Add users</span>
-    </div>
-  )
-
+  const randomPick = Math.floor(Math.random() * players.length)
   return (
     <div className="truth-or-dare">
      {/* <Players players={players}/> */}
@@ -20,7 +9,8 @@ const TruthOrDare = ({players}) => {
       <div className="card">
         <div className="truth">TRUTH</div>
         <div className="player">
-          {playerRoll}
+          {players[randomPick].name}
+          
         </div>
         <div className="dare">DARE</div>
       </div>
