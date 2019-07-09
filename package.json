@@ -2,7 +2,7 @@
   "name": "truth-or-dare",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nightspite.github.io/truth-or-dare/",
+  "homepage": "https://nightspite.github.io/truth-or-dare/public/index.html",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
