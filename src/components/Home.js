@@ -10,11 +10,19 @@ const Home = ({players, deletePlayer, addPlayer}) => {
       <Players players={players} deletePlayer={deletePlayer}/>
 
         <AddPlayer addPlayer={addPlayer} />
-        <Link to="/truthordare">
-          <button className="start-btn">
-            <i className="material-icons">play_arrow</i> <p>Let's play!</p>
-          </button>
-        </Link>
+
+        {players.length > 0 ? (
+            <Link to="/truthordare">
+            <button className="start-btn">
+              <i className="material-icons">play_arrow</i> <p>Let's play!</p>
+            </button>
+          </Link>
+          ) : (
+            <button className="start-btn">
+              <i className="material-icons">play_arrow</i> <p>Let's play!</p>
+            </button>
+          )}
+        
     </div>
   );
 }

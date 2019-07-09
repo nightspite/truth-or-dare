@@ -72,7 +72,7 @@ class App extends Component {
           <Route exact path='/truthordare' render={(props) => (<TruthOrDare {...props} players={this.state.players} />)} />
           <Route exact path='/truthcard' render={(props) => (<TruthCard {...props} questions={this.state.questions} randomPick={Math.floor(Math.random() * this.state.questions.length)} />)} />
           <Route exact path='/darecard' render={(props) => (<DareCard {...props} dares={this.state.dares} randomPick={Math.floor(Math.random() * this.state.dares.length)} />)} />
-
+          
           <Link to="/" className="home-btn">
             <button><i className="material-icons">home</i></button>
           </Link>
