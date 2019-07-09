@@ -15,8 +15,7 @@ class App extends Component {
       {name: 'Patrycja', gender: 'F', id: 2},
       {name: 'Marcel', gender: 'M', id: 3},
       {name: 'Wiktoria', gender: 'F', id: 4},
-      {name: 'Cersia', gender: 'F', id: 5},
-      {name: 'Janisz', gender: 'M', id: 6}
+      {name: 'Cersia', gender: 'F', id: 5}
     ],
     questions: [
       {question: 'Have you ever experimented with the same sex as yours just for fun?', shot: 2, id: 1},
