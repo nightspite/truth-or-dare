@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { HashRouter , Route} from 'react-router-dom';
 import Home from './components/Home';
 import TruthOrDare from './components/TruthOrDare';
 import TruthCard from './components/TruthCard';
@@ -67,7 +67,7 @@ class App extends Component {
 
   render(){
     return (
-      <BrowserRouter>
+      <HashRouter >
         <div className="App">
           <Route exact path='/' render={(props) => (<Home {...props} players={this.state.players} deletePlayer={this.deletePlayer} addPlayer={this.addPlayer} />)} />
           <Route exact path='/truthordare' render={(props) => (<TruthOrDare {...props} players={this.state.players} />)} />
@@ -79,7 +79,7 @@ class App extends Component {
           </Link>
 
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
