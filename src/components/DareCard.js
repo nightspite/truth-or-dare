@@ -19,16 +19,16 @@ class DareCard extends Component {
     return (
       <div className="truth-dare-card">
         <div className="card">
-          <div className="label">TRUTH</div>
+          <div className="label">DARE</div>
           <div className="content">
             <p>{dares[randomPick].dare}</p>
           </div>
 
-            <Shot show={this.state.show} handleClose={this.hideModal}>
-              <p>U have to drink</p>
-              <p>{dares[randomPick].shot}</p>
-              <p>{dares[randomPick].shot === 1 ? "shot" : "shots"}</p>
-            </Shot>
+          <Shot show={this.state.show} handleClose={this.hideModal}>
+            <p>U have to drink</p>
+            <p>{dares[randomPick].shot}</p>
+            <p>{dares[randomPick].shot === 1 ? "shot" : "shots"}</p>
+          </Shot>
 
           <div className="shot" onClick={this.showModal}>
             <img src={shot} alt="shot"/>

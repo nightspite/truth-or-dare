@@ -24,11 +24,11 @@ class TruthCard extends Component {
             <p>{questions[randomPick].question}</p>
           </div>
 
-            <Shot show={this.state.show} handleClose={this.hideModal}>
-              <p>U have to drink</p>
-              <p>{questions[randomPick].shot}</p>
-              <p>{questions[randomPick].shot === 1 ? "shot" : "shots"}</p>
-            </Shot>
+          <Shot show={this.state.show} handleClose={this.hideModal}>
+            <p>U have to drink</p>
+            <p>{questions[randomPick].shot}</p>
+            <p>{questions[randomPick].shot === 1 ? "shot" : "shots"}</p>
+          </Shot>
 
           <div className="shot" onClick={this.showModal}>
             <img src={shot} alt="shot"/>
