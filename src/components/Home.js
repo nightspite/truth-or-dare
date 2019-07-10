@@ -7,22 +7,24 @@ import {Link, withRouter} from 'react-router-dom';
 const Home = ({players, deletePlayer, addPlayer}) => {
   return (
     <div className="home">
-      <Players players={players} deletePlayer={deletePlayer}/>
+      <div className="card">
+        <Players players={players} deletePlayer={deletePlayer}/>
 
         <AddPlayer addPlayer={addPlayer} />
 
         {players.length > 0 ? (
             <Link to="/truthordare">
-            <button className="start-btn">
+            <div className="start-btn">
               <i className="material-icons">play_arrow</i> <p>Let's play!</p>
-            </button>
+            </div>
           </Link>
           ) : (
             <button className="start-btn">
               <i className="material-icons">play_arrow</i> <p>Let's play!</p>
             </button>
           )}
-        
+
+      </div>
     </div>
   );
 }

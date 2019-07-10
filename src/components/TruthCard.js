@@ -17,7 +17,7 @@ class TruthCard extends Component {
   render(){
     const {questions,randomPick} = this.props;
     return (
-      <div className="truth-card">
+      <div className="truth-dare-card">
         <div className="card">
           <div className="label">TRUTH</div>
           <div className="content">

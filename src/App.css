@@ -21,115 +21,130 @@
   justify-content: baseline;
   align-items: center;
   color: #fff; }
-  .home .players {
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 20px;
-    max-height: 80vh;
-    margin-bottom: 180px;
-    overflow: auto;
-    padding: 0 10px; }
-    .home .players::-webkit-scrollbar {
-      width: 6px;
-      background-color: transparent; }
-    .home .players::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: #555; }
-    .home .players .player {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-      padding: 20px 5px 8px 5px;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      min-width: 60vw;
-      font-weight: 900; }
-      .home .players .player .gender {
-        margin-right: 20px;
-        font-size: 11px; }
-      .home .players .player i {
-        font-size: 11px;
-        margin-left: auto;
-        margin-right: 0;
-        cursor: pointer; }
-    .home .players .no-players span {
-      margin: 0 auto; }
-  .home .add-player {
-    position: absolute;
-    bottom: 130px; }
-    .home .add-player .player-form {
-      display: flex;
-      flex-direction: row;
-      max-width: 80vw;
-      margin: 0 auto;
-      padding-right: 10px; }
-      .home .add-player .player-form .switch {
-        min-width: 65px;
-        position: relative; }
-        .home .add-player .player-form .switch:before {
-          content: '  ';
-          z-index: -1;
-          display: inline-block; }
-        .home .add-player .player-form .switch__label {
-          display: inline-block;
-          padding: 10px;
-          cursor: pointer;
-          transition: color 200ms ease-out; }
-          .home .add-player .player-form .switch__label:hover {
-            color: white; }
-        .home .add-player .player-form .switch__indicator {
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          top: 7px;
-          border-radius: 50%;
-          transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
-          transform: translate3d(1rem, 0, 0); }
-        .home .add-player .player-form .switch input#male:checked ~ .switch__indicator {
-          background: #006E73;
-          transform: translateX(8px); }
-        .home .add-player .player-form .switch input#female:checked ~ .switch__indicator {
-          background: #006E73;
-          transform: translateX(37px); }
-        .home .add-player .player-form .switch input[type="radio"]:not(:checked), .home .add-player .player-form .switch input[type="radio"]:checked {
-          display: none; }
-    .home .add-player input#user-input {
-      min-width: 0;
-      border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-      background: none;
-      color: #fff;
-      padding: 0 5px;
-      text-align: center; }
-      .home .add-player input#user-input::placeholder {
-        color: rgba(255, 255, 255, 0.5); }
-    .home .add-player button {
-      border: none;
-      background: none;
-      color: rgba(255, 255, 255, 0.9);
-      cursor: pointer; }
-      .home .add-player button i {
-        font-size: 15px;
-        margin-top: 10px; }
-  .home .start-btn {
+  .home .card {
     width: 80%;
-    height: 70px;
-    color: #fff;
-    background-color: #212125;
-    border: 0;
-    border-radius: 10px;
+    height: 80%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 15px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif; }
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .home .card .players {
+      font-family: 'Montserrat', sans-serif;
+      max-height: calc(100% - 200px);
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 20px;
+      overflow: auto;
+      padding: 0 10px; }
+      .home .card .players::-webkit-scrollbar {
+        width: 6px;
+        background-color: transparent; }
+      .home .card .players::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #555; }
+      .home .card .players .player {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        padding: 20px 5px 8px 5px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 900; }
+        .home .card .players .player .gender {
+          margin-right: 20px;
+          font-size: 11px; }
+        .home .card .players .player i {
+          font-size: 11px;
+          margin-left: auto;
+          margin-right: 0;
+          cursor: pointer; }
+      .home .card .players .no-players span {
+        margin: 0 auto; }
+    .home .card .add-player {
+      position: absolute;
+      bottom: 120px;
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%); }
+      .home .card .add-player .player-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .home .card .add-player .player-form .switch {
+          min-width: 65px;
+          position: relative; }
+          .home .card .add-player .player-form .switch:before {
+            content: '  ';
+            z-index: -1;
+            display: inline-block; }
+          .home .card .add-player .player-form .switch__label {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            transition: color 200ms ease-out; }
+            .home .card .add-player .player-form .switch__label:hover {
+              color: white; }
+          .home .card .add-player .player-form .switch__indicator {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 7px;
+            border-radius: 50%;
+            transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
+            transform: translate3d(1rem, 0, 0); }
+          .home .card .add-player .player-form .switch input#male:checked ~ .switch__indicator {
+            background: #006E73;
+            transform: translateX(8px); }
+          .home .card .add-player .player-form .switch input#female:checked ~ .switch__indicator {
+            background: #006E73;
+            transform: translateX(37px); }
+          .home .card .add-player .player-form .switch input[type="radio"]:not(:checked), .home .card .add-player .player-form .switch input[type="radio"]:checked {
+            display: none; }
+      .home .card .add-player input#user-input {
+        min-width: 0;
+        width: calc(70% - 66px);
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        background: none;
+        color: #fff;
+        padding: 0 5px;
+        text-align: center; }
+        .home .card .add-player input#user-input::placeholder {
+          color: rgba(255, 255, 255, 0.5); }
+      .home .card .add-player button {
+        border: none;
+        background: none;
+        color: rgba(255, 255, 255, 0.9);
+        cursor: pointer; }
+        .home .card .add-player button i {
+          font-size: 15px;
+          margin-top: 10px; }
+    .home .card .start-btn {
+      width: 70%;
+      height: 70px;
+      color: #fff;
+      background-color: #212125;
+      border: 0;
+      border-radius: 10px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', sans-serif;
+      z-index: -1; }
 
 .truth-or-dare {
   height: 100vh;
@@ -199,11 +214,11 @@
       font-size: 20px;
       font-weight: 900; }
 
-.truth-card {
+.truth-dare-card {
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to right bottom, #550073, #510081, #480091, #3702a2, #040cb3); }
-  .truth-card .card {
+  .truth-dare-card .card {
     width: 80%;
     height: 80%;
     border: 3px solid #fff;
@@ -215,7 +230,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
-    .truth-card .card .label {
+    .truth-dare-card .card .label {
       position: absolute;
       left: 50%;
       padding: 0 20px;
@@ -231,19 +246,19 @@
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       z-index: 2; }
-    .truth-card .card .content {
+    .truth-dare-card .card .content {
       height: 50%;
       font-weight: 500;
       letter-spacing: 1.5px;
       text-align: center;
       padding: 0 10%; }
-      .truth-card .card .content p {
+      .truth-dare-card .card .content p {
         position: relative;
         top: 50%;
         transform: translateY(-50%); }
-    .truth-card .card .shot {
+    .truth-dare-card .card .shot {
       position: absolute;
-      bottom: 25%;
+      bottom: 120px;
       left: 50%;
       padding: 10px;
       width: 69px;
@@ -254,13 +269,14 @@
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-shadow: 0 0 25px 5px #212125;
-      z-index: -1; }
-      .truth-card .card .shot img {
+      z-index: -1;
+      cursor: pointer; }
+      .truth-dare-card .card .shot img {
         margin-left: 50%;
         transform: translateX(-50%);
         width: 35px; }
-    .truth-card .card .next-round-btn {
-      width: 80%;
+    .truth-dare-card .card .next-round-btn {
+      width: 70%;
       height: 70px;
       color: #fff;
       background-color: #212125;
@@ -270,7 +286,7 @@
       left: 50%;
       transform: translateX(-50%);
       bottom: 0;
-      margin-bottom: 30px;
+      margin: 30px 0;
       display: flex;
       align-items: center;
       justify-content: center;
