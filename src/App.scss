@@ -16,6 +16,7 @@
       border-bottom-left-radius: 0;
       padding: 3px 3px 1px 1px;
       outline: none;
+      cursor: pointer;
       
       i{
         color: #fff;
@@ -162,7 +163,7 @@
       
       input#user-input{
         min-width: 0;
-        width: calc(70% - 66px);
+        width: calc(100% - 103px);
         border: none;
         border-bottom: 1px solid rgba(255,255,255,0.9);
         background: none;

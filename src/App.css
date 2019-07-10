@@ -13,7 +13,8 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       padding: 3px 3px 1px 1px;
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
       .App .home-btn button i {
         color: #fff; }
 
@@ -114,7 +115,7 @@
             display: none; }
       .home .card .add-player input#user-input {
         min-width: 0;
-        width: calc(70% - 66px);
+        width: calc(100% - 103px);
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.9);
         background: none;
