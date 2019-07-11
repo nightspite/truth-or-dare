@@ -165,7 +165,7 @@ class App extends Component {
       {question: 'Would you ever want to make a video with me?', shot: 2, id: 149}
     ],
     dares: [
-      {dare: 'Kill yourself', shot: 2137, id: 1}
+      {dare: 'Kill yourself', shot: 2137, id: 1},
       {dare: 'Have someone blindfold you. Then, everyone in the group kisses you on the cheek, and you have to either say which one is your partner, and then kiss them on the lips, OR, you have to choose one person that you want to kiss on the lips.', shot: 3, id: 2},
       {dare: 'With your eyes closed and the other person or people standing across from you in the room, walk with your hands out. You have to kiss the first person you touch, where you touch them.', shot: 3, id: 3},
       {dare: 'You have to undress down to your accessories and skivvies. If you want to keep any clothes on, you have to take a shot for every piece of clothing you want to keep.', shot: 'custom', id: 4},
