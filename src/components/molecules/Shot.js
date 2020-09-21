@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Shot = ({ handleClose, show, children }) => {
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
   return (
     <div className={showHideClassName}>
@@ -14,4 +14,3 @@ const Shot = ({ handleClose, show, children }) => {
 };
 
 export default Shot;
-

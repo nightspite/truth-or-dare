@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import shot from './shot.png';
-import Shot from './Shot';
-import {Link, withRouter} from 'react-router-dom';
+import shot from 'assets/shot.png';
+import Shot from 'components/molecules/Shot';
+import { Link, withRouter } from 'react-router-dom';
 
 class DareCard extends Component {
   state = { show: false };
@@ -14,8 +14,8 @@ class DareCard extends Component {
     this.setState({ show: false });
   };
 
-  render(){
-    const {dares,randomPick} = this.props;
+  render() {
+    const { dares, randomPick } = this.props;
     return (
       <div className="truth-dare-card">
         <div className="card">
@@ -27,16 +27,15 @@ class DareCard extends Component {
           <Shot show={this.state.show} handleClose={this.hideModal}>
             <p>U have to drink</p>
             <p>{dares[randomPick].shot}</p>
-            <p>{dares[randomPick].shot === 1 ? "shot" : "shots"}</p>
+            <p>{dares[randomPick].shot === 1 ? 'shot' : 'shots'}</p>
           </Shot>
 
           <div className="shot" onClick={this.showModal}>
-            <img src={shot} alt="shot"/>
+            <img src={shot} alt="shot" />
           </div>
-          <Link to='/truthordare'>
+          <Link to="/truthordare">
             <div className="next-round-btn">Next round</div>
           </Link>
-
         </div>
       </div>
     );
@@ -44,4 +43,3 @@ class DareCard extends Component {
 }
 
 export default withRouter(DareCard);
-
