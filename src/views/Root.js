@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Home from 'views/Home';
 import TruthOrDare from 'views/TruthOrDare';
 import TruthCard from 'views/TruthCard';
@@ -8,42 +8,47 @@ import MainTemplate from 'templates/MainTemplate';
 
 class Root extends Component {
   state = {
-    players: [{ name: 'Default', gender: 'M', id: 1 }],
+    players: [{ name: 'Default', id: 1 }],
   };
 
-  addPlayer = (player) => {
+  addPlayer = player => {
     const { players } = this.state;
-    // player.id = this.state.players.length + 1;
+
+    // eslint-disable-next-line no-param-reassign
     player.id = players.length + 1;
     const playersList = [...players, player];
 
     this.setState({
-      playersList,
+      players: playersList,
     });
   };
 
-  deletePlayer = (id) => {
-    const players = this.state.players.filter((player) => {
+  deletePlayer = id => {
+    const { players } = this.state;
+
+    const playersList = players.filter(player => {
       return player.id !== id;
     });
 
     this.setState({
-      players,
+      players: playersList,
     });
   };
 
   render() {
+    const { players } = this.state;
+
     return (
-      <HashRouter>
-        <MainTemplate className="App">
+      <BrowserRouter>
+        <MainTemplate>
           <Switch>
             <Route
               exact
               path="/"
-              render={(props) => (
+              render={props => (
                 <Home
                   {...props}
-                  players={this.state.players}
+                  players={players}
                   deletePlayer={this.deletePlayer}
                   addPlayer={this.addPlayer}
                 />
@@ -52,45 +57,18 @@ class Root extends Component {
             <Route
               exact
               path="/truthordare"
-              render={(props) => (
-                <TruthOrDare {...props} players={this.state.players} />
-              )}
+              render={props => <TruthOrDare {...props} players={players} />}
             />
-            <Route
-              exact
-              path="/truthcard"
-              render={(props) => (
-                <TruthCard
-                  {...props}
-                  questions={this.state.questions}
-                  randomPick={Math.floor(
-                    Math.random() * this.state.questions.length,
-                  )}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/darecard"
-              render={(props) => (
-                <DareCard
-                  {...props}
-                  dares={this.state.dares}
-                  randomPick={Math.floor(
-                    Math.random() * this.state.dares.length,
-                  )}
-                />
-              )}
-            />
+            <Route exact path="/truthcard" component={TruthCard} />
+            <Route exact path="/darecard" component={DareCard} />
+            <Link to="/" className="home-btn">
+              <button type="button">
+                <i className="material-icons">home</i>
+              </button>
+            </Link>
           </Switch>
-
-          <Link to="/" className="home-btn">
-            <button type="button">
-              <i className="material-icons">home</i>
-            </button>
-          </Link>
         </MainTemplate>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }

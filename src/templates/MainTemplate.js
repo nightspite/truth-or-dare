@@ -6,7 +6,7 @@ import { theme } from 'theme/mainTheme';
 import { withRouter } from 'react-router';
 // import PageContext from 'context';
 
-const MainTemplate = children => (
+const MainTemplate = ({ children }) => (
   // const { pageType } = this.state;
   <div className="App">
     {/* <PageContext.Provider value={pageType}> */}

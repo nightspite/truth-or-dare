@@ -102,10 +102,6 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 16px;
     font-weight: 900;
   }
-  .home .card .players .player .gender {
-    margin-right: 20px;
-    font-size: 11px;
-  }
   .home .card .players .player i {
     font-size: 11px;
     margin-left: auto;
@@ -127,35 +123,7 @@ const GlobalStyle = createGlobalStyle`${css`
     flex-direction: row;
     justify-content: center;
   }
-  .home .card .add-player .player-form .switch {
-    min-width: 65px;
-    position: relative;
-  }
-  .home .card .add-player .player-form .switch:before {
-    content: '  ';
-    z-index: -1;
-    display: inline-block;
-  }
-  .home .card .add-player .player-form .switch__label {
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
-    transition: color 200ms ease-out;
-  }
-  .home .card .add-player .player-form .switch__label:hover {
-    color: white;
-  }
-  .home .card .add-player .player-form .switch__indicator {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 4px;
-    left: -2px;
-    border-radius: 50%;
-    transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97),
-      background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
-    transform: translate3d(1rem, 0, 0);
-  }
+
   .home
     .card
     .add-player

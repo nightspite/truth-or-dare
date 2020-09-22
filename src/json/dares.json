@@ -1,151 +1,151 @@
 [
-  { "dare": "Kill yourself", "shot": 2137, "id": 1 },
   {
-    "dare": "Have someone blindfold you. Then, everyone in the group kisses you on the cheek, and you have to either say which one is your partner, and then kiss them on the lips, OR, you have to choose one person that you want to kiss on the lips.",
+    "value": "Invite one of your friends over for threesome.",
+    "shot": 3,
+    "id": 0
+  },
+  { "value": "Kill yourself", "shot": 2137, "id": 1 },
+  {
+    "value": "Have someone blindfold you. Then, everyone in the group kisses you on the cheek, and you have to either say which one is your partner, and then kiss them on the lips, OR, you have to choose one person that you want to kiss on the lips.",
     "shot": 3,
     "id": 2
   },
   {
-    "dare": "With your eyes closed and the other person or people standing across from you in the room, walk with your hands out. You have to kiss the first person you touch, where you touch them.",
+    "value": "With your eyes closed and the other person or people standing across from you in the room, walk with your hands out. You have to kiss the first person you touch, where you touch them.",
     "shot": 3,
     "id": 3
   },
   {
-    "dare": "You have to undress down to your accessories and skivvies. If you want to keep any clothes on, you have to take a shot for every piece of clothing you want to keep.",
+    "value": "You have to undress down to your accessories and skivvies. If you want to keep any clothes on, you have to take a shot for every piece of clothing you want to keep.",
     "shot": "custom",
     "id": 4
   },
   {
-    "dare": "Take off your bra but leave your shirt on.",
+    "value": "Take off your bra but leave your shirt on.",
     "shot": 3,
     "id": 5
   },
   {
-    "dare": "Try to take off your underwear without flashing anyone.",
+    "value": "Try to take off your underwear without flashing anyone.",
     "shot": 3,
     "id": 6
   },
   {
-    "dare": "Touch tongues with someone of different sex.",
+    "value": "Touch tongues with someone of different sex.",
     "shot": 2,
     "id": 7
   },
   {
-    "dare": "Close your eyes, scroll through your contacts list and tell me the sexiest thing about the person you you land on.",
+    "value": "Close your eyes, scroll through your contacts list and tell me the sexiest thing about the person you you land on.",
     "shot": 3,
     "id": 8
   },
   {
-    "dare": "Sing the chorus of a song you’ve had sex to.",
+    "value": "Sing the chorus of a song you’ve had sex to.",
     "shot": 2,
     "id": 9
   },
   {
-    "dare": "Send a message to someone you want to sleep with describing a dirty dream you’ve had about them.",
+    "value": "Send a message to someone you want to sleep with describing a dirty dream you’ve had about them.",
     "shot": 4,
     "id": 10
   },
-  { "dare": "Try on someone else's underwear.", "shot": 2, "id": 11 },
+  { "value": "Try on someone else's underwear.", "shot": 2, "id": 11 },
   {
-    "dare": "Take off your pants for the rest of the game.",
+    "value": "Take off your pants for the rest of the game.",
     "shot": 3,
     "id": 12
   },
   {
-    "dare": "Take off your shirt for the rest of the game.",
+    "value": "Take off your shirt for the rest of the game.",
     "shot": 3,
     "id": 13
   },
   {
-    "dare": "Show person in front of you the sexiest picture you have on your phone.",
+    "value": "Show person in front of you the sexiest picture you have on your phone.",
     "shot": 3,
     "id": 14
   },
   {
-    "dare": "Spank person in front of you as hard as you can.",
+    "value": "Spank person in front of you as hard as you can.",
     "shot": 2,
     "id": 15
   },
   {
-    "dare": "Ask anyone of your friends like your face.",
+    "value": "Ask anyone of your friends like your face.",
     "shot": 2,
     "id": 16
   },
-  { "dare": "Twerk in only your underwear.", "shot": 3, "id": 17 },
+  { "value": "Twerk in only your underwear.", "shot": 3, "id": 17 },
   {
-    "dare": "Take off 3rd person's (counting to the left) underwear using only your teeth.",
+    "value": "Take off 3rd person's (counting to the left) underwear using only your teeth.",
     "shot": 3,
     "id": 18
   },
   {
-    "dare": "Put your hand down 4rd person's (counting to the right) pants until the next round.",
+    "value": "Put your hand down 4rd person's (counting to the right) pants until the next round.",
     "shot": 3,
     "id": 19
   },
   {
-    "dare": "Make out with the person to the right of you.",
+    "value": "Make out with the person to the right of you.",
     "shot": 3,
     "id": 20
   },
-  { "dare": "Give your partner head for 3 minutes.", "shot": 3, "id": 21 },
+  { "value": "Give your partner head for 3 minutes.", "shot": 3, "id": 21 },
   {
-    "dare": "Blindfold yourself, spin around for ten seconds, who ever you are pointing to at the end, you have to kiss him/her.",
+    "value": "Blindfold yourself, spin around for ten seconds, who ever you are pointing to at the end, you have to kiss him/her.",
     "shot": 3,
     "id": 22
   },
-  { "dare": "Give a hand job for 3 minutes.", "shot": 3, "id": 23 },
+  { "value": "Give a hand job for 3 minutes.", "shot": 3, "id": 23 },
   {
-    "dare": "Make love with your partner for 3 minutes only.",
+    "value": "Make love with your partner for 3 minutes only.",
     "shot": 3,
     "id": 24
   },
   {
-    "dare": "Take off your partner’s bra (or nearest woman’s) using only your teeth.",
+    "value": "Take off your partner’s bra (or nearest woman’s) using only your teeth.",
     "shot": 3,
     "id": 25
   },
-  { "dare": "Send a nude to your ex.", "shot": 3, "id": 26 },
+  { "value": "Send a nude to your ex.", "shot": 3, "id": 26 },
   {
-    "dare": "Pull up your favourite porn site your phone right now.",
+    "value": "Pull up your favourite porn site your phone right now.",
     "shot": 2,
     "id": 27
   },
   {
-    "dare": "Give head to the person next to you for 2 full songs.",
+    "value": "Give head to the person next to you for 2 full songs.",
     "shot": 3,
     "id": 28
   },
   {
-    "dare": "Make your partner cum using only your hands.",
+    "value": "Make your partner cum using only your hands.",
     "shot": 3,
     "id": 29
   },
   {
-    "dare": "Give someone head for three full songs, or until I cum, whichever comes first.",
+    "value": "Give someone head for three full songs, or until I cum, whichever comes first.",
     "shot": 3,
     "id": 30
   },
-  { "dare": "Eat someone's booty out.", "shot": 3, "id": 31 },
-  { "dare": "Ride someone's dick for 3 minutes only.", "shot": 3, "id": 32 },
-  { "dare": "Let someone put a finger in your booty.", "shot": 3, "id": 33 },
+  { "value": "Eat someone's booty out.", "shot": 3, "id": 31 },
+  { "value": "Ride someone's dick for 3 minutes only.", "shot": 3, "id": 32 },
+  { "value": "Let someone put a finger in your booty.", "shot": 3, "id": 33 },
   {
-    "dare": "Take someone's underwear using only your teeth.",
+    "value": "Take someone's underwear using only your teeth.",
     "shot": 3,
     "id": 34
   },
   {
-    "dare": "Pick your favourite porn, let’s watch it together and do exactly what they do.",
+    "value": "Pick your favourite porn, let’s watch it together and do exactly what they do.",
     "shot": 3,
     "id": 35
   },
   {
-    "dare": "Let someone sit on your face while you give him/her head.",
+    "value": "Let someone sit on your face while you give him/her head.",
     "shot": 3,
     "id": 36
-  },
-  {
-    "dare": "Invite one of your friends over for threesome.",
-    "shot": 3,
-    "id": 37
   }
 ]

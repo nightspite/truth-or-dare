@@ -1,20 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Players = ({ players, deletePlayer }) => {
   const playerList = players.length ? (
     players.map(player => {
       return (
         <div className="player" key={player.id}>
-          <div className="gender">{player.gender}</div>
           <span>{player.name}</span>
-          <i
-            className="material-icons"
+          <button
+            type="button"
             onClick={() => {
               deletePlayer(player.id);
             }}
           >
-            close
-          </i>
+            <i className="material-icons">close</i>
+          </button>
         </div>
       );
     })
@@ -24,6 +24,11 @@ const Players = ({ players, deletePlayer }) => {
     </div>
   );
   return <div className="players">{playerList}</div>;
+};
+
+Players.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.object).isRequired,
+  deletePlayer: PropTypes.func.isRequired,
 };
 
 export default Players;

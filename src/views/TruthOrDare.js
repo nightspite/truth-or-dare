@@ -12,6 +12,7 @@ const TruthOrDare = ({ players }) => {
         <Link to="/truthcard" className="truth-link">
           <div className="truth">TRUTH</div>
         </Link>
+
         <div className="player">{players[randomPick].name}</div>
 
         <Link to="/darecard" className="dare-link">
