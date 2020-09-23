@@ -24,7 +24,10 @@ const GlobalStyle = createGlobalStyle`${css`
   .App {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
+    /* background: #1abc9c; */
+    background: #83af9b;
   }
+
   .App .home-btn {
     position: absolute;
     top: 20px;
@@ -48,14 +51,6 @@ const GlobalStyle = createGlobalStyle`${css`
   .home {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(
-      to right bottom,
-      #550073,
-      #510081,
-      #480091,
-      #3702a2,
-      #040cb3
-    );
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -102,11 +97,14 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 16px;
     font-weight: 900;
   }
-  .home .card .players .player i {
+  .home .card .players .player button {
     font-size: 11px;
     margin-left: auto;
     margin-right: 0;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
   }
   .home .card .players .no-players span {
     margin: 0 auto;
@@ -204,14 +202,6 @@ const GlobalStyle = createGlobalStyle`${css`
   .truth-or-dare {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(
-      to right bottom,
-      #550073,
-      #510081,
-      #480091,
-      #3702a2,
-      #040cb3
-    );
   }
   .truth-or-dare .card {
     width: 80%;
@@ -286,14 +276,6 @@ const GlobalStyle = createGlobalStyle`${css`
   .truth-dare-card {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(
-      to right bottom,
-      #550073,
-      #510081,
-      #480091,
-      #3702a2,
-      #040cb3
-    );
   }
   .truth-dare-card .card {
     width: 80%;
