@@ -21,12 +21,6 @@ const GlobalStyle = createGlobalStyle`${css`
   }
 
   /* APP */
-  .App {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    /* background: #1abc9c; */
-    background: #83af9b;
-  }
 
   .App .home-btn {
     position: absolute;

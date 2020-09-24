@@ -1,19 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'theme/GlobalStyle';
 import { theme } from 'theme/mainTheme';
 import { withRouter } from 'react-router';
 // import PageContext from 'context';
 
+const AppWrapper = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  /* background: #1abc9c; */
+  background: #83af9b;
+`;
+
 const MainTemplate = ({ children }) => (
   // const { pageType } = this.state;
-  <div className="App">
+  <AppWrapper className="App">
     {/* <PageContext.Provider value={pageType}> */}
     <GlobalStyle />
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
     {/* </PageContext.Provider> */}
-  </div>
+  </AppWrapper>
 );
 
 MainTemplate.propTypes = {
