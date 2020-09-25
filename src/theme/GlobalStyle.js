@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`${css`
   .App .home-btn button i {
     color: #fff;
   }
-
+  /* 
   .home {
     height: 100vh;
     width: 100vw;
@@ -63,7 +63,8 @@ const GlobalStyle = createGlobalStyle`${css`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
+
   .home .card .players {
     font-family: 'Montserrat', sans-serif;
     max-height: calc(100% - 200px);
@@ -170,7 +171,7 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 15px;
     margin-top: 10px;
   }
-  .home .card .start-btn {
+  /* .home .card .start-btn {
     width: 70%;
     height: 70px;
     color: #fff;
@@ -191,7 +192,7 @@ const GlobalStyle = createGlobalStyle`${css`
     font-family: 'Montserrat', sans-serif;
     z-index: -1;
     outline: none;
-  }
+  } */
 
   .truth-or-dare {
     height: 100vh;

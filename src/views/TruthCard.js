@@ -5,7 +5,7 @@ import Shot from 'components/molecules/Shot';
 import questions from 'json/questions.json';
 import styled from 'styled-components';
 
-const ShotImageWrapper = styled.div`
+const StyledShotImageWrapper = styled.div`
   position: absolute;
   bottom: 120px;
   left: 50%;
@@ -63,9 +63,9 @@ class TruthCard extends Component {
             <p>{question.shot === 1 ? 'shot' : 'shots'}</p>
           </Shot>
 
-          <ShotImageWrapper onClick={this.showModal}>
+          <StyledShotImageWrapper onClick={this.showModal}>
             <ShotImage src={shot} alt="shot" />
-          </ShotImageWrapper>
+          </StyledShotImageWrapper>
           <Link to="/truthordare">
             <div className="next-round-btn">Next round</div>
           </Link>

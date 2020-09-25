@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import dares from 'json/dares.json';
 import styled from 'styled-components';
 
-const ShotImageWrapper = styled.div`
+const StyledShotImageWrapper = styled.div`
   position: absolute;
   bottom: 120px;
   left: 50%;
@@ -22,7 +22,7 @@ const ShotImageWrapper = styled.div`
   cursor: pointer;
 `;
 
-const ShotImage = styled.img`
+const StyledShotImage = styled.img`
   margin-left: 50%;
   transform: translateX(-50%);
   width: 35px;
@@ -63,9 +63,9 @@ class DareCard extends Component {
             <p>{dare.shot === 1 ? 'shot' : 'shots'}</p>
           </Shot>
 
-          <ShotImageWrapper onClick={this.showModal}>
-            <ShotImage src={shot} alt="shot" />
-          </ShotImageWrapper>
+          <StyledShotImageWrapper onClick={this.showModal}>
+            <StyledShotImage src={shot} alt="shot" />
+          </StyledShotImageWrapper>
           <Link to="/truthordare">
             <div className="next-round-btn">Next round</div>
           </Link>
