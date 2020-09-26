@@ -83,7 +83,7 @@ const GlobalStyle = createGlobalStyle`${css`
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #555;
   }
-  .home .card .players .player {
+  /* .home .card .players .player {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     padding: 20px 5px 8px 5px;
     text-align: left;
@@ -100,7 +100,7 @@ const GlobalStyle = createGlobalStyle`${css`
     background: none;
     border: none;
     color: white;
-  }
+  } */
   .home .card .players .no-players span {
     margin: 0 auto;
   }
@@ -127,7 +127,7 @@ const GlobalStyle = createGlobalStyle`${css`
     background: #006e73;
     transform: translateX(8px);
   }
-  .home
+  /* .home
     .card
     .add-player
     .player-form
@@ -145,7 +145,7 @@ const GlobalStyle = createGlobalStyle`${css`
     input[type='radio']:not(:checked),
   .home .card .add-player .player-form .switch input[type='radio']:checked {
     display: none;
-  }
+  } */
   .home .card .add-player input#user-input {
     min-width: 0;
     width: calc(100% - 103px);

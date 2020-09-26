@@ -45,7 +45,7 @@ const Home = ({ players, deletePlayer, addPlayer }) => {
             </Button>
           </Link>
         ) : (
-          <Button type="button" disabled>
+          <Button disabled>
             <i className="material-icons">play_arrow</i> <p>Let&apos;s play!</p>
           </Button>
         )}
