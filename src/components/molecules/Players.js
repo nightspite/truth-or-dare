@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Close } from '@material-ui/icons';
 
 const PlayerWrapper = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -8,11 +9,11 @@ const PlayerWrapper = styled.div`
   text-align: left;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: 900;
 `;
 const StyledCloseButton = styled.button`
-  font-size: 11px;
+  font-size: ${({ theme }) => theme.fontSize.xs};
   margin-left: auto;
   margin-right: 0;
   cursor: pointer;
@@ -21,30 +22,49 @@ const StyledCloseButton = styled.button`
   color: white;
 `;
 
-const Players = ({ players, deletePlayer }) => {
-  const playerList = players.length ? (
-    players.map(player => {
-      return (
-        <PlayerWrapper className="player" key={player.id}>
-          <span>{player.name}</span>
-          <StyledCloseButton
-            type="button"
-            onClick={() => {
-              deletePlayer(player.id);
-            }}
-          >
-            <i className="material-icons">close</i>
-          </StyledCloseButton>
-        </PlayerWrapper>
-      );
-    })
-  ) : (
-    <PlayerWrapper className="player no-players">
-      <span>Add users</span>
-    </PlayerWrapper>
-  );
-  return <div className="players">{playerList}</div>;
-};
+// const Players = ({ players, deletePlayer }) => {
+//   const playerList = players.length ? (
+//     players.map(player => {
+//       return (
+//         <PlayerWrapper className="player" key={player.id}>
+//           <span>{player.name}</span>
+
+//           <StyledCloseButton
+//             type="button"
+//             onClick={() => {
+//               deletePlayer(player.id);
+//             }}
+//           >
+//             <Close />
+//           </StyledCloseButton>
+//         </PlayerWrapper>
+//       );
+//     })
+//   ) : (
+//     <PlayerWrapper className="player no-players">
+//       <span>Add users</span>
+//     </PlayerWrapper>
+//   );
+//   return <>{playerList}</>;
+// };
+
+const Players = ({ players, deletePlayer }) =>
+  players.map(player => {
+    return (
+      <PlayerWrapper className="player" key={player.id}>
+        <span>{player.name}</span>
+
+        <StyledCloseButton
+          type="button"
+          onClick={() => {
+            deletePlayer(player.id);
+          }}
+        >
+          <Close />
+        </StyledCloseButton>
+      </PlayerWrapper>
+    );
+  });
 
 Players.propTypes = {
   players: PropTypes.arrayOf(PropTypes.object).isRequired,

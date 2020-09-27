@@ -11,11 +11,13 @@ const AppWrapper = styled.div`
   color: #fff;
   /* background: #1abc9c; */
   background: #83af9b;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const MainTemplate = ({ children }) => (
   // const { pageType } = this.state;
-  <AppWrapper className="App">
+  <AppWrapper>
     {/* <PageContext.Provider value={pageType}> */}
     <GlobalStyle />
     <ThemeProvider theme={theme}>{children}</ThemeProvider>

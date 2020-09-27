@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Add } from '@material-ui/icons';
 
 class AddPlayer extends Component {
   state = {
@@ -43,7 +44,7 @@ class AddPlayer extends Component {
           />
 
           <button type="submit">
-            <i className="material-icons">add</i>
+            <Add />
           </button>
         </form>
       </div>

@@ -22,51 +22,7 @@ const GlobalStyle = createGlobalStyle`${css`
 
   /* APP */
 
-  .App .home-btn {
-    position: absolute;
-    top: 20px;
-    left: 0;
-  }
-  .App .home-btn button {
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    border-left: none;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding: 3px 3px 1px 1px;
-    outline: none;
-    cursor: pointer;
-  }
-  .App .home-btn button i {
-    color: #fff;
-  }
-  /* 
-  .home {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
-    color: #fff;
-  }
-  .home .card {
-    width: 80%;
-    height: 80%;
-    border: 3px solid #fff;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-radius: 15px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  } */
-
   .home .card .players {
-    font-family: 'Montserrat', sans-serif;
     max-height: calc(100% - 200px);
     width: 70%;
     margin: 0 auto;
@@ -189,7 +145,6 @@ const GlobalStyle = createGlobalStyle`${css`
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
     z-index: -1;
     outline: none;
   } */
@@ -314,27 +269,7 @@ const GlobalStyle = createGlobalStyle`${css`
     top: 50%;
     transform: translateY(-50%);
   }
-  .truth-dare-card .card .shot {
-    position: absolute;
-    bottom: 120px;
-    left: 50%;
-    padding: 10px;
-    width: 69px;
-    transform: translateX(-50%);
-    border: 2px solid #fff;
-    border-radius: 50px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-shadow: 0 0 25px 1px #212125;
-    z-index: -1;
-    cursor: pointer;
-  }
-  .truth-dare-card .card .shot img {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 35px;
-  }
+
   .truth-dare-card .card .modal {
     position: fixed;
     top: 0;
@@ -366,38 +301,16 @@ const GlobalStyle = createGlobalStyle`${css`
     background: transparent;
     margin: 10px 0 5px 0;
     padding: 5px 10px;
-    font-family: 'Montserrat', sans-serif;
     border: 2px solid #444;
     border-radius: 10px;
     letter-spacing: 1px;
   }
+
   .truth-dare-card .card .modal.display-block {
     display: block;
   }
   .truth-dare-card .card .modal.display-none {
     display: none;
-  }
-  .truth-dare-card .card .next-round-btn {
-    width: 70%;
-    height: 70px;
-    color: #fff;
-    background-color: #212125;
-    border: 0;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    margin: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
-    z-index: -1;
-    outline: none;
   }
 
   /*# sourceMappingURL=App.css.map */

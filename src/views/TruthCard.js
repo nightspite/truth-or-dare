@@ -69,9 +69,10 @@ class TruthCard extends Component {
           <StyledShotImageWrapper onClick={this.showModal}>
             <StyledShot />
           </StyledShotImageWrapper>
-          <Link to="/truthordare">
-            <Button>Next round</Button>
-          </Link>
+
+          <Button as={Link} to="/truthordare">
+            Next round
+          </Button>
         </div>
       </div>
     );

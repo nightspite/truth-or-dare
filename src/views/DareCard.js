@@ -70,9 +70,9 @@ class DareCard extends Component {
             <StyledShot />
           </StyledShotImageWrapper>
 
-          <Link to="/truthordare" as={Button}>
-            <Button>Next round</Button>
-          </Link>
+          <Button as={Link} to="/truthordare">
+            Next round
+          </Button>
         </div>
       </div>
     );

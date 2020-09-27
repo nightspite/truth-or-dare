@@ -16,42 +16,68 @@ const StyledHomeWrapper = styled.div`
   align-items: center;
   color: #fff;
 `;
-const StyledHomeCard = styled.div`
-  width: 80%;
-  height: 80%;
-  border: 3px solid #fff;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border-radius: 15px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+const StyledPlayers = styled.div`
+  max-height: calc(100% - 200px);
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: auto;
+  padding: 0 10px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
+`;
+
+const StyledPlayArrow = styled(PlayArrow)`
+  font-size: 30px !important;
+  margin-right: 5px;
+`;
+
+const StyledNoPlayers = styled.div`
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 20px 5px 8px 5px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: ${({ theme }) => theme.fontSize.s};
+  font-weight: 900;
 `;
 
 const Home = ({ players, deletePlayer, addPlayer }) => {
   return (
-    <StyledHomeWrapper className="home">
-      <StyledHomeCard className="card">
-        <Players players={players} deletePlayer={deletePlayer} />
-
-        <AddPlayer addPlayer={addPlayer} />
-
-        {players.length > 0 ? (
-          <Link to="/truthordare">
-            <Button>
-              <PlayArrow />
-              <p>Let&apos;s play!</p>
-            </Button>
-          </Link>
+    <StyledHomeWrapper>
+      <StyledPlayers>
+        {players.length ? (
+          <Players players={players} deletePlayer={deletePlayer} />
         ) : (
-          <Button disabled>
-            <PlayArrow />
-            <p>Let&apos;s play!</p>
-          </Button>
+          <StyledNoPlayers className="player no-players">
+            <span>Add users</span>
+          </StyledNoPlayers>
         )}
-      </StyledHomeCard>
+      </StyledPlayers>
+
+      <AddPlayer addPlayer={addPlayer} />
+
+      {players.length > 0 ? (
+        <Button as={Link} to="/truthordare">
+          <StyledPlayArrow />
+          <p>Let&apos;s play!</p>
+        </Button>
+      ) : (
+        <Button disabled>
+          <StyledPlayArrow />
+          <p>Let&apos;s play!</p>
+        </Button>
+      )}
     </StyledHomeWrapper>
   );
 };

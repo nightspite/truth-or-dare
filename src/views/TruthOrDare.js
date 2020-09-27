@@ -1,25 +1,30 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Button from 'components/atoms/Button';
+import Heading from 'components/atoms/Heading';
+import styled from 'styled-components';
+import GameTemplate from 'templates/GameTemplate';
+
+const StyledButton = styled(Button)`
+  background-color: white;
+  color: #212125;
+`;
 
 const TruthOrDare = ({ players }) => {
   const randomPick = Math.floor(Math.random() * players.length);
   return (
-    <div className="truth-or-dare">
-      {/* <Players players={players}/> */}
+    <GameTemplate>
+      <Heading className="player">{players[randomPick].name}</Heading>
 
-      <div className="card">
-        <Link to="/truthcard" className="truth-link">
-          <div className="truth">TRUTH</div>
-        </Link>
+      <StyledButton as={Link} to="/truthcard">
+        TRUTH
+      </StyledButton>
 
-        <div className="player">{players[randomPick].name}</div>
-
-        <Link to="/darecard" className="dare-link">
-          <div className="dare">DARE</div>
-        </Link>
-      </div>
-    </div>
+      <Button as={Link} to="/darecard">
+        DARE
+      </Button>
+    </GameTemplate>
   );
 };
 
