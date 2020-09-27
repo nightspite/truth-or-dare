@@ -5,6 +5,7 @@ import AddPlayer from 'components/molecules/AddPlayer';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from 'components/atoms/Button';
+import { PlayArrow } from '@material-ui/icons';
 
 const StyledHomeWrapper = styled.div`
   height: 100vh;
@@ -40,13 +41,14 @@ const Home = ({ players, deletePlayer, addPlayer }) => {
         {players.length > 0 ? (
           <Link to="/truthordare">
             <Button>
-              <i className="material-icons">play_arrow</i>{' '}
+              <PlayArrow />
               <p>Let&apos;s play!</p>
             </Button>
           </Link>
         ) : (
           <Button disabled>
-            <i className="material-icons">play_arrow</i> <p>Let&apos;s play!</p>
+            <PlayArrow />
+            <p>Let&apos;s play!</p>
           </Button>
         )}
       </StyledHomeCard>

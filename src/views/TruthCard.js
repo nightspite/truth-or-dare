@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import shot from 'assets/shot.png';
 import { Link, withRouter } from 'react-router-dom';
 import Shot from 'components/molecules/Shot';
 import questions from 'json/questions.json';
 import styled from 'styled-components';
+import Button from 'components/atoms/Button';
+import Paragraph from 'components/atoms/Paragraph';
+import { LocalBar } from '@material-ui/icons';
 
 const StyledShotImageWrapper = styled.div`
   position: absolute;
@@ -22,10 +24,11 @@ const StyledShotImageWrapper = styled.div`
   cursor: pointer;
 `;
 
-const ShotImage = styled.img`
+const StyledShot = styled(LocalBar)`
   margin-left: 50%;
   transform: translateX(-50%);
   width: 35px;
+  font-size: 40;
 `;
 
 class TruthCard extends Component {
@@ -58,16 +61,16 @@ class TruthCard extends Component {
           </div>
 
           <Shot show={show} handleClose={this.hideModal}>
-            <p>U have to drink</p>
-            <p>{question.shot}</p>
-            <p>{question.shot === 1 ? 'shot' : 'shots'}</p>
+            <Paragraph>U have to drink</Paragraph>
+            <Paragraph>{question.shot}</Paragraph>
+            <Paragraph>{question.shot === 1 ? 'shot' : 'shots'}</Paragraph>
           </Shot>
 
           <StyledShotImageWrapper onClick={this.showModal}>
-            <ShotImage src={shot} alt="shot" />
+            <StyledShot />
           </StyledShotImageWrapper>
           <Link to="/truthordare">
-            <div className="next-round-btn">Next round</div>
+            <Button>Next round</Button>
           </Link>
         </div>
       </div>

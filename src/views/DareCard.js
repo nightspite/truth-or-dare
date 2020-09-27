@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import shot from 'assets/shot.png';
 import Shot from 'components/molecules/Shot';
 import { Link, withRouter } from 'react-router-dom';
 import dares from 'json/dares.json';
 import styled from 'styled-components';
+import Button from 'components/atoms/Button';
+import Paragraph from 'components/atoms/Paragraph';
+import { LocalBar } from '@material-ui/icons';
 
 const StyledShotImageWrapper = styled.div`
   position: absolute;
@@ -22,10 +24,11 @@ const StyledShotImageWrapper = styled.div`
   cursor: pointer;
 `;
 
-const StyledShotImage = styled.img`
+const StyledShot = styled(LocalBar)`
   margin-left: 50%;
   transform: translateX(-50%);
   width: 35px;
+  font-size: ${({ theme }) => theme.fontSize.xl};
 `;
 
 class DareCard extends Component {
@@ -58,16 +61,17 @@ class DareCard extends Component {
           </div>
 
           <Shot show={show} handleClose={this.hideModal}>
-            <p>U have to drink</p>
-            <p>{dare.shot}</p>
-            <p>{dare.shot === 1 ? 'shot' : 'shots'}</p>
+            <Paragraph>U have to drink</Paragraph>
+            <Paragraph>{dare.shot}</Paragraph>
+            <Paragraph>{dare.shot === 1 ? 'shot' : 'shots'}</Paragraph>
           </Shot>
 
           <StyledShotImageWrapper onClick={this.showModal}>
-            <StyledShotImage src={shot} alt="shot" />
+            <StyledShot />
           </StyledShotImageWrapper>
-          <Link to="/truthordare">
-            <div className="next-round-btn">Next round</div>
+
+          <Link to="/truthordare" as={Button}>
+            <Button>Next round</Button>
           </Link>
         </div>
       </div>
