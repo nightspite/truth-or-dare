@@ -4,7 +4,6 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'theme/GlobalStyle';
 import { theme } from 'theme/mainTheme';
 import { withRouter } from 'react-router';
-// import PageContext from 'context';
 
 const AppWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -16,12 +15,9 @@ const AppWrapper = styled.div`
 `;
 
 const MainTemplate = ({ children }) => (
-  // const { pageType } = this.state;
   <AppWrapper>
-    {/* <PageContext.Provider value={pageType}> */}
     <GlobalStyle />
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    {/* </PageContext.Provider> */}
   </AppWrapper>
 );
 

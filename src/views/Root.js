@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from 'views/Home';
 import TruthOrDare from 'views/TruthOrDare';
-import TruthCard from 'views/TruthCard';
-import DareCard from 'views/DareCard';
+import Truth from 'views/Truth';
+import Dare from 'views/Dare';
 import MainTemplate from 'templates/MainTemplate';
+import { routes } from 'routes';
 
 class Root extends Component {
   state = {
-    players: [{ name: 'Default', id: 1 }],
+    players: [{ name: 'Player', id: 1 }],
   };
 
   addPlayer = player => {
@@ -44,7 +45,7 @@ class Root extends Component {
           <Switch>
             <Route
               exact
-              path="/"
+              path={routes.home}
               render={props => (
                 <Home
                   {...props}
@@ -55,17 +56,11 @@ class Root extends Component {
               )}
             />
             <Route
-              exact
-              path="/truthordare"
+              path={routes.truthordare}
               render={props => <TruthOrDare {...props} players={players} />}
             />
-            <Route exact path="/truthcard" component={TruthCard} />
-            <Route exact path="/darecard" component={DareCard} />
-            <Link to="/" className="home-btn">
-              <button type="button">
-                <i className="material-icons">home</i>
-              </button>
-            </Link>
+            <Route path={routes.truth} component={Truth} />
+            <Route path={routes.dare} component={Dare} />
           </Switch>
         </MainTemplate>
       </BrowserRouter>

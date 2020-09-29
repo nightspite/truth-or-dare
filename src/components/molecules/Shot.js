@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Shot = ({ handleClose, show, children }) => {
-  const showHideClassName = show ? 'modal display-block' : 'modal display-none';
-
   return (
-    <div className={showHideClassName}>
+    <div style={{ display: show ? 'block' : 'none' }}>
       <section className="modal-main">
         {children}
         <button type="button" onClick={handleClose}>

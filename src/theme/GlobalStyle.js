@@ -22,133 +22,6 @@ const GlobalStyle = createGlobalStyle`${css`
 
   /* APP */
 
-  .home .card .players {
-    max-height: calc(100% - 200px);
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 20px;
-    overflow: auto;
-    padding: 0 10px;
-  }
-  .home .card .players::-webkit-scrollbar {
-    width: 6px;
-    background-color: transparent;
-  }
-  .home .card .players::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #555;
-  }
-  /* .home .card .players .player {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    padding: 20px 5px 8px 5px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 900;
-  }
-  .home .card .players .player button {
-    font-size: 11px;
-    margin-left: auto;
-    margin-right: 0;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-  } */
-  .home .card .players .no-players span {
-    margin: 0 auto;
-  }
-  .home .card .add-player {
-    position: absolute;
-    bottom: 120px;
-    width: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .home .card .add-player .player-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .home
-    .card
-    .add-player
-    .player-form
-    .switch
-    input#male:checked
-    ~ .switch__indicator {
-    background: #006e73;
-    transform: translateX(8px);
-  }
-  /* .home
-    .card
-    .add-player
-    .player-form
-    .switch
-    input#female:checked
-    ~ .switch__indicator {
-    background: #006e73;
-    transform: translateX(37px);
-  }
-  .home
-    .card
-    .add-player
-    .player-form
-    .switch
-    input[type='radio']:not(:checked),
-  .home .card .add-player .player-form .switch input[type='radio']:checked {
-    display: none;
-  } */
-  .home .card .add-player input#user-input {
-    min-width: 0;
-    width: calc(100% - 103px);
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-    background: none;
-    color: #fff;
-    padding: 0 5px;
-    text-align: center;
-    outline: none;
-  }
-  .home .card .add-player input#user-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  .home .card .add-player button {
-    border: none;
-    background: none;
-    color: rgba(255, 255, 255, 0.9);
-    cursor: pointer;
-    outline: none;
-  }
-  .home .card .add-player button i {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-  /* .home .card .start-btn {
-    width: 70%;
-    height: 70px;
-    color: #fff;
-    background-color: #212125;
-    border: 0;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    margin: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    z-index: -1;
-    outline: none;
-  } */
-
   .truth-or-dare {
     height: 100vh;
     width: 100vw;
@@ -223,23 +96,6 @@ const GlobalStyle = createGlobalStyle`${css`
     font-weight: 900;
   }
 
-  .truth-dare-card {
-    height: 100vh;
-    width: 100vw;
-  }
-  .truth-dare-card .card {
-    width: 80%;
-    height: 80%;
-    border: 3px solid #fff;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-radius: 15px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
   .truth-dare-card .card .label {
     position: absolute;
     left: 50%;
@@ -312,8 +168,6 @@ const GlobalStyle = createGlobalStyle`${css`
   .truth-dare-card .card .modal.display-none {
     display: none;
   }
-
-  /*# sourceMappingURL=App.css.map */
 `}`;
 
 export default GlobalStyle;

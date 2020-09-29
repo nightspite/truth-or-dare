@@ -1,6 +1,42 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Add } from '@material-ui/icons';
+import styled from 'styled-components';
+
+const StyledAddPlayerWrapper = styled.div`
+  width: 70%;
+`;
+
+const StyledAddPlayerForm = styled.form`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+const StyledAddPlayerInput = styled.input`
+  min-width: 0;
+  /* width: calc(100% - 103px); */
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  background: none;
+  color: #fff;
+  padding: 0 5px;
+  text-align: center;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+`;
+
+const StyledAddPlayerButton = styled.button`
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  outline: none;
+`;
 
 class AddPlayer extends Component {
   state = {
@@ -33,9 +69,9 @@ class AddPlayer extends Component {
     const { name } = this.state;
 
     return (
-      <div className="add-player">
-        <form className="player-form" onSubmit={this.handleSubmit}>
-          <input
+      <StyledAddPlayerWrapper>
+        <StyledAddPlayerForm onSubmit={this.handleSubmit}>
+          <StyledAddPlayerInput
             type="text"
             id="user-input"
             placeholder="Add player"
@@ -43,11 +79,11 @@ class AddPlayer extends Component {
             value={name}
           />
 
-          <button type="submit">
+          <StyledAddPlayerButton type="submit">
             <Add />
-          </button>
-        </form>
-      </div>
+          </StyledAddPlayerButton>
+        </StyledAddPlayerForm>
+      </StyledAddPlayerWrapper>
     );
   }
 }
