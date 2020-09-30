@@ -9,7 +9,7 @@ const AppWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   /* background: #1abc9c; */
-  background: #83af9b;
+  background: ${theme.background};
   width: 100vw;
   height: 100vh;
 `;

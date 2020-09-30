@@ -5,25 +5,29 @@ import styled from 'styled-components';
 
 const StyledAddPlayerWrapper = styled.div`
   width: 70%;
+  position: absolute;
+  bottom: 130px;
 `;
 
 const StyledAddPlayerForm = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 `;
 
 const StyledAddPlayerInput = styled.input`
   min-width: 0;
   /* width: calc(100% - 103px); */
-  width: 100%;
+  width: 80%;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
   background: none;
   color: #fff;
   padding: 0 5px;
-  text-align: center;
+  text-align: left;
   outline: none;
+  padding: 5px 10px;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -32,10 +36,17 @@ const StyledAddPlayerInput = styled.input`
 
 const StyledAddPlayerButton = styled.button`
   border: none;
-  background: none;
-  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  height: 19px;
+  width: 19px;
+  color: white;
+  background-color: transparent;
   cursor: pointer;
   outline: none;
+`;
+
+const StyledAdd = styled(Add)`
+  font-size: ${({ theme }) => theme.fontSize.m} !important;
 `;
 
 class AddPlayer extends Component {
@@ -73,14 +84,13 @@ class AddPlayer extends Component {
         <StyledAddPlayerForm onSubmit={this.handleSubmit}>
           <StyledAddPlayerInput
             type="text"
-            id="user-input"
             placeholder="Add player"
             onChange={this.handleChange}
             value={name}
           />
 
           <StyledAddPlayerButton type="submit">
-            <Add />
+            <StyledAdd />
           </StyledAddPlayerButton>
         </StyledAddPlayerForm>
       </StyledAddPlayerWrapper>

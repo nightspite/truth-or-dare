@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Shot from 'components/molecules/Shot';
+import ShotModal from 'components/molecules/ShotModal';
 import questions from 'json/questions.json';
 import styled from 'styled-components';
 import Button from 'components/atoms/Button';
@@ -10,7 +10,7 @@ import { LocalBar } from '@material-ui/icons';
 import { routes } from 'routes';
 import GameTemplate from 'templates/GameTemplate';
 
-const StyledShotImageWrapper = styled.div`
+const StyledImageWrapper = styled.div`
   color: white;
   background: transparent;
   width: 50px;
@@ -26,9 +26,8 @@ const StyledShotImageWrapper = styled.div`
   align-items: center;
 `;
 
-const StyledShot = styled(LocalBar)`
-  width: 35px;
-  font-size: ${({ theme }) => theme.fontSize.m} !important;
+const StyledImage = styled(LocalBar)`
+  font-size: ${({ theme }) => theme.fontSize.l} !important;
 `;
 
 const StyledContentWrapper = styled.div`
@@ -47,6 +46,10 @@ const StyledHeading = styled(Heading)`
 const StyledButton = styled(Button)`
   position: absolute;
   bottom: 50px;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.xl};
 `;
 
 class Truth extends Component {
@@ -77,15 +80,15 @@ class Truth extends Component {
           <Paragraph>{question.value}</Paragraph>
         </StyledContentWrapper>
 
-        <Shot show={show} handleClose={this.hideModal}>
+        <ShotModal show={show} handleClose={this.hideModal}>
           <Paragraph>U have to drink</Paragraph>
-          <Paragraph>{question.shot}</Paragraph>
+          <StyledParagraph>{question.shot}</StyledParagraph>
           <Paragraph>{question.shot === 1 ? 'shot' : 'shots'}</Paragraph>
-        </Shot>
+        </ShotModal>
 
-        <StyledShotImageWrapper onClick={this.showModal}>
-          <StyledShot />
-        </StyledShotImageWrapper>
+        <StyledImageWrapper onClick={this.showModal}>
+          <StyledImage />
+        </StyledImageWrapper>
 
         <StyledButton as={Link} to={routes.truthordare}>
           Next round

@@ -7,16 +7,7 @@ import styled from 'styled-components';
 import Button from 'components/atoms/Button';
 import Paragraph from 'components/atoms/Paragraph';
 import { PlayArrow } from '@material-ui/icons';
-
-const StyledHomeWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: center;
-  color: #fff;
-`;
+import HomeTemplate from 'templates/HomeTemplate';
 
 const StyledPlayArrow = styled(PlayArrow)`
   font-size: 30px !important;
@@ -27,25 +18,30 @@ const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.m};
 `;
 
+const StyledButton = styled(Button)`
+  position: absolute;
+  bottom: 50px;
+`;
+
 const Home = ({ players, deletePlayer, addPlayer }) => {
   return (
-    <StyledHomeWrapper>
+    <HomeTemplate>
       <Players players={players} deletePlayer={deletePlayer} />
 
       <AddPlayer addPlayer={addPlayer} />
 
       {players.length > 0 ? (
-        <Button as={Link} to="/truthordare">
+        <StyledButton as={Link} to="/truthordare">
           <StyledPlayArrow />
           <StyledParagraph>Let&apos;s play!</StyledParagraph>
-        </Button>
+        </StyledButton>
       ) : (
-        <Button disabled>
+        <StyledButton disabled>
           <StyledPlayArrow />
           <StyledParagraph>Let&apos;s play!</StyledParagraph>
-        </Button>
+        </StyledButton>
       )}
-    </StyledHomeWrapper>
+    </HomeTemplate>
   );
 };
 

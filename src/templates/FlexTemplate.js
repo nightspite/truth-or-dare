@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledWrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  padding: 0 30px 100px 30px;
+  padding: 0 30px 50px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;

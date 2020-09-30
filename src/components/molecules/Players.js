@@ -6,10 +6,9 @@ import { Close } from '@material-ui/icons';
 const StyledPlayersWrapper = styled.div`
   max-height: calc(100% - 200px);
   width: 70%;
-  margin: 0 auto;
-  margin-top: 20px;
   overflow: auto;
   padding: 0 10px;
+  margin-top: 20px;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -24,7 +23,7 @@ const StyledPlayersWrapper = styled.div`
 `;
 
 const StyledPlayerWrapper = styled.div`
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
   padding: 20px 5px 8px 5px;
   text-align: left;
   display: flex;
@@ -33,7 +32,7 @@ const StyledPlayerWrapper = styled.div`
   font-weight: ${({ theme }) => theme.bold};
 `;
 const StyledCloseButton = styled.button`
-  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-size: ${({ theme }) => theme.fontSize.m} !important;
   margin-left: auto;
   margin-right: 0;
   cursor: pointer;
@@ -59,13 +58,11 @@ const Players = ({ players, deletePlayer }) => (
             {player.name}
 
             <StyledCloseButton
-              type="button"
               onClick={() => {
                 deletePlayer(player.id);
               }}
-            >
-              <Close />
-            </StyledCloseButton>
+              as={Close}
+            />
           </StyledPlayerWrapper>
         );
       })

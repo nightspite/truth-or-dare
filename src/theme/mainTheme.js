@@ -1,8 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 export const theme = {
-  grey100: 'hsl(0, 0%, 96%)',
-  grey200: 'hsl(0, 0%, 90%)',
-  grey300: 'hsl(0, 0%, 70%)',
+  background: '#83af9b',
   black: 'hsl(0, 0%, 0%)',
   error: 'hsl(13, 100%, 50%)',
   light: 300,
