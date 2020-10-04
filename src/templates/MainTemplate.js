@@ -8,8 +8,8 @@ import { withRouter } from 'react-router';
 const AppWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  /* background: #1abc9c; */
-  background: ${theme.background};
+  /* background: ${theme.background}; */
+  background-image: radial-gradient(circle, #5cecc0, #50e1b6, #44d6ab, #36cca1, #26c197, #1db88e, #12ae86, #02a57d, #029b73, #02916a, #018761, #007d58);
   width: 100vw;
   height: 100vh;
 `;
